@@ -1,4 +1,4 @@
-package com.example.moskovchuk_final_project
+package com.example.moskovchuk_final_project.presentation
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

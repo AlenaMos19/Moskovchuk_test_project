@@ -1,10 +1,11 @@
-package com.example.moskovchuk_final_project
+package com.example.moskovchuk_final_project.presentation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
+import com.example.moskovchuk_final_project.R
 import com.example.moskovchuk_final_project.databinding.ActivityHomeBinding
 
 class HomeActivity : AppCompatActivity(), Navigator {
@@ -16,14 +17,11 @@ class HomeActivity : AppCompatActivity(), Navigator {
     private val fragmentListener = object : FragmentManager.FragmentLifecycleCallbacks() {
         override fun onFragmentViewCreated(fm: FragmentManager, f: Fragment, v: View, savedInstanceState: Bundle?) {
             super.onFragmentViewCreated(fm, f, v, savedInstanceState)
-
         }
     }
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_home)
 
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -36,7 +34,7 @@ class HomeActivity : AppCompatActivity(), Navigator {
                     .commit()
             }
 
-            bottomNavigation?.setOnItemSelectedListener { it ->
+            bottomNavigation.setOnItemSelectedListener { it ->
                 when (it.itemId) {
                     R.id.nav_personage -> showPersonageFragment()
                     R.id.nav_locations -> showLocationFragment()

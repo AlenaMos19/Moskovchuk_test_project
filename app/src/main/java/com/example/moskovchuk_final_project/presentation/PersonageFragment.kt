@@ -1,30 +1,29 @@
-package com.example.moskovchuk_final_project
+package com.example.moskovchuk_final_project.presentation
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.moskovchuk_final_project.databinding.FragmentLocationsBinding
+import com.example.moskovchuk_final_project.databinding.FragmentPersonageBinding
 
 
-class LocationsFragment : Fragment() {
+class PersonageFragment : Fragment() {
 
-    lateinit var binding: FragmentLocationsBinding
+    lateinit var binding: FragmentPersonageBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
 
-        binding = FragmentLocationsBinding.inflate(inflater)
+        binding = FragmentPersonageBinding.inflate(inflater)
         return binding.root
     }
 
     companion object {
 
         @JvmStatic
-        fun newInstance() = LocationsFragment()
-
+        fun newInstance() = PersonageFragment()
     }
 }

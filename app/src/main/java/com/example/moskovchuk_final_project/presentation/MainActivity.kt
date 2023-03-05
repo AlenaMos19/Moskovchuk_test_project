@@ -1,9 +1,10 @@
-package com.example.moskovchuk_final_project
+package com.example.moskovchuk_final_project.presentation
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import com.example.moskovchuk_final_project.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
